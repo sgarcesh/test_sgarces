@@ -35,17 +35,17 @@ pip-wheel-metadata/
 #   DATA LAKEHOUSE (BRONZE/SILVER/GOLD)
 # ==========================
 
-# Ignorar todos los datos del lakehouse
-data/bronze/
-data/silver/
-data/gold/
-data/raw/
-
 # Si quieres permitir carpetas vacías para mantener estructura:
 !data/bronze/.keep
 !data/silver/.keep
 !data/gold/.keep
 !data/raw/.keep
+
+# Ignorar todos los datos del lakehouse
+# data/bronze/
+# data/silver/
+# data/gold/
+data/raw/
 
 # ==========================
 #   PARQUET / DELTA FILES
@@ -55,10 +55,13 @@ data/raw/
 *.crc
 *.snappy.parquet
 *.lzo.parquet
+*_SUCCESS
 
 # Delta Lake transaction logs
 **/_delta_log/
 **/.checkpoint/
+
+*.csv
 
 # ==========================
 #   TEMPORAL / CACHE
