@@ -1,0 +1,80 @@
+# ==========================
+#   SISTEMA / GENERAL
+# ==========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+*.swp
+*.swo
+*.log
+
+# ==========================
+#   JUPYTER NOTEBOOKS
+# ==========================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ==========================
+#   ENTORNO / CONFIG
+# ==========================
+!example.env   # si quieres subir un ejemplo vacío
+*.env.backup
+
+# ==========================
+#   PYTHON ENVIRONMENTS
+# ==========================
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+# ==========================
+#   DATA LAKEHOUSE (BRONZE/SILVER/GOLD)
+# ==========================
+
+# Ignorar todos los datos del lakehouse
+data/bronze/
+data/silver/
+data/gold/
+data/raw/
+
+# Si quieres permitir carpetas vacías para mantener estructura:
+!data/bronze/.keep
+!data/silver/.keep
+!data/gold/.keep
+!data/raw/.keep
+
+# ==========================
+#   PARQUET / DELTA FILES
+# ==========================
+*.parquet
+*.delta
+*.crc
+*.snappy.parquet
+*.lzo.parquet
+
+# Delta Lake transaction logs
+**/_delta_log/
+**/.checkpoint/
+
+# ==========================
+#   TEMPORAL / CACHE
+# ==========================
+tmp/
+temp/
+.cache/
+.sparkStaging/
+*/_temporary/
+*/_committed_*
+*/_started_*
+
+# ==========================
+#   DOCKER / BUILD ARTIFACTS
+# ==========================
+*.pid
+*.tar
+docker-compose.override.yml
+docker-data/
